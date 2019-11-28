@@ -1,6 +1,3 @@
-# microdadosEnem_Deficit_Atencao
-Análise dos Micro Dados dos alunos que fizeram o Enem nos anos de 2014 a 2018.
-
 <h1>Análise Microdados ENEP</h1>
 <h3>Análise dos Micro Dados dos alunos que fizeram o Enem nos anos de 2014 a 2018</h3>
 
