@@ -58,11 +58,19 @@ Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 
 ```deficit2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()```
 
 Essa mesma leitura foi feita para todos os anos de estudo: 2014, 2015, 2016, 2017 e 2018
+As variáveis criadas foram:
+<ul>
+  <li>deficit2014</li>
+  <li>deficit2015</li>
+  <li>deficit2016</li>
+  <li>deficit2017</li>
+  <li>deficit2018</li>
 
 A função query consulta a informação desejada. 
 
 **IN_DEFICIT_ATENCAO == 1**: alunos com Défict de Atenção
 **IN_DEFICIT_ATENCAO == 0**: alunos sem Défict de Atenção
+
 
 <h4> Resultado da Consulta:</h4>
 <ul>
@@ -71,8 +79,12 @@ A função query consulta a informação desejada.
   <li>2016: 5300 alunos com Défict de Atenção fizeram o Enem</li>
   <li>2017: 7789 alunos com Défict de Atenção fizeram o Enem</li>
   <li>2018: 7199 alunos com Défict de Atenção fizeram o Enem</li>
-  
+
+
 <h3> Criando o gráfico</h3>
 
+<img src="https://user-images.githubusercontent.com/56441375/69770555-3c0d5880-1168-11ea-8ea6-9327801965d3.PNG"height="650" widht ="650">
 
+Criamos uma lista vazia chamada **dados_por_ano**. 
+Adicionamos os valores coletados 
 
