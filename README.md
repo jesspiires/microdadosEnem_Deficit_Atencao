@@ -33,13 +33,15 @@ PS: digite ```jupyter notebook``` no prompt de comando para abrir o jupyter e cr
 
 <h3>Importação das bibliotecas no Jupyter</h3>
 
-```import pandas as pd```
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
-```import matplotlib.pyplot as plt```
+low_memory = False
+``` 
 
-```import numpy as np```
-
-```low_memory = False``` Permite que não haja problemas referente a falta de memória do computador
+Permite que não haja problemas referente a falta de memória do computador
 
 <h3>Importação das Listas com as colunas de interesse</h3>
 
@@ -57,7 +59,7 @@ Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 
 <h3>Variáveis para o Gráfico</h3>
 
 ```
-anos = ['2014', '2015', '2016', '2017', '2018'] ```
+anos = ['2014', '2015', '2016', '2017', '2018']
 dados_por_ano = []
 ```
 
@@ -71,7 +73,8 @@ deficit2017 = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_
 deficit2018 = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
 ```
 
-Essa mesma leitura foi feita para todos os anos de estudo: 2014, 2015, 2016, 2017 e 2018
+Essa mesma leitura foi feita para todos os anos de estudo: 2014, 2015, 2016, 2017 e 2018.
+
 As variáveis criadas foram:
 <ul>
   <li>deficit2014</li>
@@ -218,3 +221,6 @@ plt.legend()
 ```
 
 <img src= "https://user-images.githubusercontent.com/56441375/69772008-7d543700-116d-11ea-851b-5cf5c2a00933.png" height="400" widht ="400">
+
+<h2>Considerações Finais</h2> 
+A Média das Notas de Redação dos Alunos com Défict de Atenção dos anos de 2014 a 2018 são maiores do que os alunos sem. 
