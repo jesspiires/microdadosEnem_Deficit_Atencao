@@ -65,6 +65,7 @@ As variáveis criadas foram:
   <li>deficit2016</li>
   <li>deficit2017</li>
   <li>deficit2018</li>
+</ul>
 
 A função query consulta a informação desejada. 
 
@@ -79,11 +80,11 @@ A função query consulta a informação desejada.
   <li>2016: 5300 alunos com Défict de Atenção fizeram o Enem</li>
   <li>2017: 7789 alunos com Défict de Atenção fizeram o Enem</li>
   <li>2018: 7199 alunos com Défict de Atenção fizeram o Enem</li>
-
+</ul>
 
 <h3> Criando o gráfico</h3>
 
-<img src="https://user-images.githubusercontent.com/56441375/69770555-3c0d5880-1168-11ea-8ea6-9327801965d3.PNG"height="650" widht ="650">
+<img src= "https://user-images.githubusercontent.com/56441375/69770555-3c0d5880-1168-11ea-8ea6-9327801965d3.PNG" height="650" widht ="650">
 
 Criamos uma lista vazia chamada **dados_por_ano**. 
 Adicionamos os valores coletados 
