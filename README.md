@@ -94,5 +94,16 @@ Adicionamos os valores consultados acima, em uma só lista:
 dados_por_ano.append(deficit2015)
 dados_por_ano.append(deficit2016)
 dados_por_ano.append(deficit2017)
-dados_por_ano.append(deficit2018)```
+dados_por_ano.append(deficit2018)
+
+Para criar o Gráfico: 
+
+```plt.bar(anos, dados_por_ano, color='#6495ED')
+plt.ylabel('Candidatos com deficit de atenção')
+plt.xlabel('Anos')
+plt.title('Candidatos do ENEM com deficit de atenção')
+
+<h3>Analisando as notas da Redação</h3>
+
+
 
