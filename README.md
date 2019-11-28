@@ -94,7 +94,7 @@ Adicionamos os valores consultados acima, em uma só lista:
 dados_por_ano.append(deficit2015)
 dados_por_ano.append(deficit2016)
 dados_por_ano.append(deficit2017)
-dados_por_ano.append(deficit2018)
+```dados_por_ano.append(deficit2018)
 
 Para criar o Gráfico: 
 
