@@ -149,6 +149,7 @@ redacao2016sdf = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_
 redacao2017sdf = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
 redacao2018sdf = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
 ```
+
 ```
 redacao_por_ano_sem_df.append(redacao2014sdf)
 redacao_por_ano_sem_df.append(redacao2015sdf)
@@ -164,9 +165,34 @@ redacao_por_ano_sem_df.append(redacao2018sdf)
 redacao_por_ano_sem_df
 ```
 <ul>
-  <li>2014: 581.3305709023941</li>
-  <li>2015: 541.9724381337455</li>
+  <li>2014: 581.3305709023941 </li>
+  <li>2015: 541.9724381337455 </li>
   <li>2016: 542.1498524635513</li>
   <li>2017: 558.403625354807</li>
   <li>2018: 522.5685460989124</li>
 </ul>
+
+<h3> Gráfico de análise entre Média de Notas de: Alunos com Défict de Atenção x Alunos sem Défict de Atenção" </h3> 
+
+```
+# largura da barra
+barWidth = 0.25
+
+# posicao barra
+b1 = np.arange(len(redacao_por_ano))
+b2 = [x + barWidth for x in b1]
+
+# criaçao de barras
+plt.bar(b1, redacao_por_ano, color='#6A5ACD', width=barWidth, label='c/ Deficit')
+plt.bar(b2, redacao_por_ano_sem_df, color='#6495ED', width=barWidth, label='s/ Deficit')
+
+# legenda
+plt.xlabel('Anos')
+plt.xticks([b + barWidth for b in range(len(redacao_por_ano))], anos)
+plt.ylabel('Notas - Médias')
+plt.title('Médias das notas de redação')
+
+plt.legend()
+```
+
+
