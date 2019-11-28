@@ -27,6 +27,7 @@ Foram utilizadas as bibliotecas:
   <li>Jupyter: pip install jupyter</li>
   <li>Pandas: pip install pandas </li>
   <li>Numpy: pip install numpy</li>
+</ul>
 
 PS: digite ```jupyter notebook``` no prompt de comando para abrir o jupyter e crie um novo arquivo em ipynb 
 
