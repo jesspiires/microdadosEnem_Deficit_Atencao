@@ -44,19 +44,32 @@ PS: digite ```jupyter notebook``` no prompt de comando para abrir o jupyter e cr
 <h3>Importação das Listas com as colunas de interesse</h3>
 
 Lendo os arquivos csv
-```microdadosEnem2014 = pd.read_csv('MICRODADOS_ENEM_2014.csv', sep=',', encoding='ISO-8859-1', usecols = ['UF_RESIDENCIA', 'UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])```
+```
+microdadosEnem2014 = pd.read_csv('MICRODADOS_ENEM_2014.csv', sep=',', encoding='ISO-8859-1', usecols = ['UF_RESIDENCIA', 'UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
+microdadosEnem2015 = pd.read_csv('MICRODADOS_ENEM_2015.csv', sep=',', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
+microdadosEnem2016 = pd.read_csv('MICRODADOS_ENEM_2016.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
+microdadosEnem2017 = pd.read_csv('MICRODADOS_ENEM_2017.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
+microdadosEnem2018 = pd.read_csv('MICRODADOS_ENEM_2018.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
+```
 
 Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 2017 e 2018. 
 
 <h3>Variáveis para o Gráfico</h3>
 
-```anos = ['2014', '2015', '2016', '2017', '2018'] ```
-
-```dados_por_ano = []```
+```
+anos = ['2014', '2015', '2016', '2017', '2018'] ```
+dados_por_ano = []
+```
 
 <h3>Consulta da informação necessária: Alunos com Défict de Atenção</h3> 
 
-```deficit2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()```
+```
+deficit2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
+deficit2015 = microdadosEnem2015.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
+deficit2016 = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
+deficit2017 = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
+deficit2018 = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
+```
 
 Essa mesma leitura foi feita para todos os anos de estudo: 2014, 2015, 2016, 2017 e 2018
 As variáveis criadas foram:
@@ -71,6 +84,7 @@ As variáveis criadas foram:
 A função query consulta a informação desejada. 
 
 **IN_DEFICIT_ATENCAO == 1**: alunos com Défict de Atenção
+
 **IN_DEFICIT_ATENCAO == 0**: alunos sem Défict de Atenção
 
 
@@ -90,7 +104,13 @@ A função query consulta a informação desejada.
 Criamos uma lista vazia chamada **dados_por_ano**. 
 Adicionamos os valores consultados acima, em uma só lista: 
 
-```dados_por_ano.append(deficit2014```
+```
+dados_por_ano.append(deficit2014)
+dados_por_ano.append(deficit2015)
+dados_por_ano.append(deficit2016)
+dados_por_ano.append(deficit2017)
+dados_por_ano.append(deficit2018)
+```
 
 Para criar o Gráfico: 
 
@@ -111,6 +131,7 @@ redacao_por_ano_sem_df = [] #alunos s/ Défict de Atenção
 ```
 
 <h3>Consulta da média das notas das redações: Alunos com Défict de Atenção</h3>
+
 ```
 redacao2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
 redacao2015 = microdadosEnem2015.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
@@ -118,6 +139,7 @@ redacao2016 = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_RED
 redacao2017 = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
 redacao2018 = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
 ```
+
 A Função mean() tem como objetivo de calcular a média dentre todos os valores dos alunos com Défict de Atenção. 
 
 <h4>Adicionando as médias a lista vazia</h4> 
@@ -195,4 +217,4 @@ plt.title('Médias das notas de redação')
 plt.legend()
 ```
 
-
+<img src= "https://user-images.githubusercontent.com/56441375/69772008-7d543700-116d-11ea-851b-5cf5c2a00933.png" height="400" widht ="400">
