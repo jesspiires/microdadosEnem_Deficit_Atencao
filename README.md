@@ -40,37 +40,9 @@ low_memory = False
 
 Permite que não haja problemas referente a falta de memória do computador
 
-<h3>Importação das Listas com as colunas de interesse</h3>
-
-Lendo os arquivos csv
-```
-microdadosEnem2014 = pd.read_csv('MICRODADOS_ENEM_2014.csv', sep=',', encoding='ISO-8859-1', usecols = ['UF_RESIDENCIA', 'UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
-microdadosEnem2015 = pd.read_csv('MICRODADOS_ENEM_2015.csv', sep=',', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
-microdadosEnem2016 = pd.read_csv('MICRODADOS_ENEM_2016.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
-microdadosEnem2017 = pd.read_csv('MICRODADOS_ENEM_2017.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
-microdadosEnem2018 = pd.read_csv('MICRODADOS_ENEM_2018.csv', sep=';', encoding='ISO-8859-1', usecols = ['SG_UF_RESIDENCIA', 'SG_UF_PROVA', 'IN_DEFICIT_ATENCAO', 'NU_NOTA_REDACAO'])
-```
 
 Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 2017 e 2018. 
 
-<h3>Variáveis para o Gráfico</h3>
-
-```
-anos = ['2014', '2015', '2016', '2017', '2018']
-dados_por_ano = []
-```
-
-<h3>Consulta da informação necessária: Alunos com Défict de Atenção</h3> 
-
-```
-deficit2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
-deficit2015 = microdadosEnem2015.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
-deficit2016 = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
-deficit2017 = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
-deficit2018 = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 1)')['IN_DEFICIT_ATENCAO'].count()
-```
-
-Essa mesma leitura foi feita para todos os anos de estudo: 2014, 2015, 2016, 2017 e 2018.
 
 As variáveis criadas foram:
 <ul>
@@ -130,29 +102,8 @@ redacao_por_ano = [] #alunos c/ Défict de Atenção
 redacao_por_ano_sem_df = [] #alunos s/ Défict de Atenção
 ```
 
-<h3>Consulta da média das notas das redações: Alunos com Défict de Atenção</h3>
 
-```
-redacao2014 = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2015 = microdadosEnem2015.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2016 = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2017 = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2018 = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 1 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-```
-
-A Função mean() tem como objetivo de calcular a média dentre todos os valores dos alunos com Défict de Atenção. 
-
-<h4>Adicionando as médias a lista vazia</h4> 
-
-```
-redacao_por_ano.append(redacao2014)
-redacao_por_ano.append(redacao2015)
-redacao_por_ano.append(redacao2016)
-redacao_por_ano.append(redacao2017)
-redacao_por_ano.append(redacao2018)
-```
-
-<h4>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h4> 
+<h3>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h3> 
 <ul>
   <li>2014: 597.4</li>
   <li>2015: 668.9846590909091</li>
@@ -161,27 +112,8 @@ redacao_por_ano.append(redacao2018)
   <li>2018: 671.902343109946</li>
 </ul>
 
-<h3>Consulta da média das notas das redações: Alunos sem Défict de Atenção</h3>
-Foi feito o mesmo processo do anterior, porém, a coluna IN_DEFICIT_ATENCAO == 0, ou seja, são alunos que não possuem Défict de Atenção
 
-```
-redacao2014sdf = microdadosEnem2014.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2015sdf = microdadosEnem2015.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2016sdf = microdadosEnem2016.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2017sdf = microdadosEnem2017.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-redacao2018sdf = microdadosEnem2018.query('(IN_DEFICIT_ATENCAO == 0 and NU_NOTA_REDACAO)')['NU_NOTA_REDACAO'].mean()
-```
-
-```
-redacao_por_ano_sem_df.append(redacao2014sdf)
-redacao_por_ano_sem_df.append(redacao2015sdf)
-redacao_por_ano_sem_df.append(redacao2016sdf)
-redacao_por_ano_sem_df.append(redacao2017sdf)
-redacao_por_ano_sem_df.append(redacao2018sdf)
-```
-
-
-<h4>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h4>
+<h3>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h3>
 
 ```
 redacao_por_ano_sem_df
