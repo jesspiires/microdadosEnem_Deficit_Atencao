@@ -102,7 +102,7 @@ A função query consulta a informação desejada.
 
 <h3> Criando o gráfico</h3>
 
-<img src= "https://user-images.githubusercontent.com/56441375/69770555-3c0d5880-1168-11ea-8ea6-9327801965d3.PNG" height="400" widht ="400">
+<img src= "https://user-images.githubusercontent.com/56441375/69772546-fc963a80-116e-11ea-8d99-e05d902dbe7f.PNG" height="400" widht ="400">
 
 Criamos uma lista vazia chamada **dados_por_ano**. 
 Adicionamos os valores consultados acima, em uma só lista: 
