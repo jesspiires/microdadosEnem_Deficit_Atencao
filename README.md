@@ -88,5 +88,11 @@ A função query consulta a informação desejada.
 <img src= "https://user-images.githubusercontent.com/56441375/69770555-3c0d5880-1168-11ea-8ea6-9327801965d3.PNG" height="400" widht ="400">
 
 Criamos uma lista vazia chamada **dados_por_ano**. 
-Adicionamos os valores coletados 
+Adicionamos os valores consultados acima, em uma só lista: 
+
+```dados_por_ano.append(deficit2014)
+dados_por_ano.append(deficit2015)
+dados_por_ano.append(deficit2016)
+dados_por_ano.append(deficit2017)
+dados_por_ano.append(deficit2018)```
 
