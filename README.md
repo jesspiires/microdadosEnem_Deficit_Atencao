@@ -73,37 +73,8 @@ A função query consulta a informação desejada.
 
 <img src= "https://user-images.githubusercontent.com/56441375/69772546-fc963a80-116e-11ea-8d99-e05d902dbe7f.PNG" height="400" widht ="400">
 
-Criamos uma lista vazia chamada **dados_por_ano**. 
-Adicionamos os valores consultados acima, em uma só lista: 
 
-```
-dados_por_ano.append(deficit2014)
-dados_por_ano.append(deficit2015)
-dados_por_ano.append(deficit2016)
-dados_por_ano.append(deficit2017)
-dados_por_ano.append(deficit2018)
-```
-
-Para criar o Gráfico: 
-
-```
-plt.bar(anos, dados_por_ano, color='#6495ED')
-plt.ylabel('Candidatos com deficit de atenção')
-plt.xlabel('Anos')
-plt.title('Candidatos do ENEM com deficit de atenção')
-```
-
-<h2>Analisando as notas da Redação</h2>
-
-Foram criadas 2 listas vazias, uma dos alunos com Défict de Atenção e outra sem. 
-
-```
-redacao_por_ano = [] #alunos c/ Défict de Atenção
-redacao_por_ano_sem_df = [] #alunos s/ Défict de Atenção
-```
-
-
-<h3>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h3> 
+<h2>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h2> 
 <ul>
   <li>2014: 597.4</li>
   <li>2015: 668.9846590909091</li>
@@ -113,11 +84,9 @@ redacao_por_ano_sem_df = [] #alunos s/ Défict de Atenção
 </ul>
 
 
-<h3>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h3>
+<h2>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h2>
 
-```
-redacao_por_ano_sem_df
-```
+
 <ul>
   <li>2014: 581.3305709023941 </li>
   <li>2015: 541.9724381337455 </li>
