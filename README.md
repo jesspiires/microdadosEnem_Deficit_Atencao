@@ -44,37 +44,28 @@ Permite que não haja problemas referente a falta de memória do computador
 Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 2017 e 2018. 
 
 
-As variáveis criadas foram:
+<h2>Análise dos Alunos que fizeram Enem nos anos de 2014 a 2018:</h2> 
+
+<h3> Quantidade de Alunos com Défict de Atenção que fizeram o Enem em seus respectivos anos:</h3>
 <ul>
-  <li>deficit2014</li>
-  <li>deficit2015</li>
-  <li>deficit2016</li>
-  <li>deficit2017</li>
-  <li>deficit2018</li>
+  <li>2014: 4792 alunos </li>
+  <li>2015: 3848 alunos </li>
+  <li>2016: 5300 alunos </li>
+  <li>2017: 7789 alunos </li>
+  <li>2018: 7199 alunos </li>
 </ul>
 
-A função query consulta a informação desejada. 
+<h3> Quantidade de Alunos sem Défict de Atenção que fizeram o Enem em seus respectivos anos:</h3>
 
-**IN_DEFICIT_ATENCAO == 1**: alunos com Défict de Atenção
-
-**IN_DEFICIT_ATENCAO == 0**: alunos sem Défict de Atenção
-
-
-<h4> Resultado da Consulta:</h4>
 <ul>
-  <li>2014: 4792 alunos com Défict de Atenção fizeram o Enem</li>
-  <li>2015: 3848 alunos com Défict de Atenção fizeram o Enem</li>
-  <li>2016: 5300 alunos com Défict de Atenção fizeram o Enem</li>
-  <li>2017: 7789 alunos com Défict de Atenção fizeram o Enem</li>
-  <li>2018: 7199 alunos com Défict de Atenção fizeram o Enem</li>
+  <li>2014: 8.717.456 alunos </li>
+  <li>2015: 7.742.579 alunos </li>
+  <li>2016: 8.622.067 alunos </li>
+  <li>2017: 6.723.552 alunos </li>
+  <li>2018: 5.506.548 alunos </li>
 </ul>
 
-<h3> Criando o gráfico</h3>
-
-<img src= "https://user-images.githubusercontent.com/56441375/69772546-fc963a80-116e-11ea-8d99-e05d902dbe7f.PNG" height="400" widht ="400">
-
-
-<h2>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h2> 
+<h3> Média das notas da REDAÇÃO do Enem de Alunos **com** Défict de Atenção em seus respectivos anos:</h3>
 <ul>
   <li>2014: 597.4</li>
   <li>2015: 668.9846590909091</li>
@@ -83,9 +74,7 @@ A função query consulta a informação desejada.
   <li>2018: 671.902343109946</li>
 </ul>
 
-
-<h2>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h2>
-
+<h3> Média das notas da REDAÇÃO do Enem de Alunos **sem** Défict de Atenção em seus respectivos anos:</h3>
 
 <ul>
   <li>2014: 581.3305709023941 </li>
@@ -94,6 +83,19 @@ A função query consulta a informação desejada.
   <li>2017: 558.403625354807</li>
   <li>2018: 522.5685460989124</li>
 </ul>
+
+<h2> Análise visual </h3>
+
+<img src= "https://user-images.githubusercontent.com/56441375/69772546-fc963a80-116e-11ea-8d99-e05d902dbe7f.PNG" height="400" widht ="400">
+
+
+<h2>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h2> 
+
+
+<h2>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h2>
+
+
+
 
 <h3> Gráfico de análise entre Média de Notas de: Alunos com Défict de Atenção x Alunos sem Défict de Atenção" </h3> 
 
