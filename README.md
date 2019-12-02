@@ -65,7 +65,7 @@ Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 
   <li>2018: 5.506.548 alunos </li>
 </ul>
 
-<h3> Média das notas da REDAÇÃO do Enem de Alunos **com** Défict de Atenção em seus respectivos anos:</h3>
+<h3> Média das notas da REDAÇÃO do Enem de Alunos com Défict de Atenção em seus respectivos anos:</h3>
 <ul>
   <li>2014: 597.4</li>
   <li>2015: 668.9846590909091</li>
@@ -74,7 +74,7 @@ Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 
   <li>2018: 671.902343109946</li>
 </ul>
 
-<h3> Média das notas da REDAÇÃO do Enem de Alunos **sem** Défict de Atenção em seus respectivos anos:</h3>
+<h3> Média das notas da REDAÇÃO do Enem de Alunos sem Défict de Atenção em seus respectivos anos:</h3>
 
 <ul>
   <li>2014: 581.3305709023941 </li>
@@ -86,41 +86,16 @@ Essa mesma leitura foi feita para os microdados do enem dos anos de 2015, 2016, 
 
 <h2> Análise visual </h3>
 
-<img src= "https://user-images.githubusercontent.com/56441375/69772546-fc963a80-116e-11ea-8d99-e05d902dbe7f.PNG" height="400" widht ="400">
+<h3> Quantidade de Candidatos do Enem com Défict de Atenção por ano:</h3> 
 
+<img src= "https://user-images.githubusercontent.com/56441375/69923145-4342a800-1481-11ea-997f-1567ed4978d4.png" height="400" widht ="400">
 
-<h2>Resultados das médias das notas de Redação: Alunos com Défict de Atenção</h2> 
+<h3> Quantidade de Candidatos do Enem sem Défict de Atenção por ano:</h3> 
 
+<img src= "https://user-images.githubusercontent.com/56441375/69923154-50f82d80-1481-11ea-9c4e-c81bcb4c3869.png" height="400" widht ="400">
 
-<h2>Resultado da média das Notas de Redação dos Alunos sem Défict de Atenção: </h2>
-
-
-
-
-<h3> Gráfico de análise entre Média de Notas de: Alunos com Défict de Atenção x Alunos sem Défict de Atenção" </h3> 
-
-```
-# largura da barra
-barWidth = 0.25
-
-# posicao barra
-b1 = np.arange(len(redacao_por_ano))
-b2 = [x + barWidth for x in b1]
-
-# criaçao de barras
-plt.bar(b1, redacao_por_ano, color='#6A5ACD', width=barWidth, label='c/ Deficit')
-plt.bar(b2, redacao_por_ano_sem_df, color='#6495ED', width=barWidth, label='s/ Deficit')
-
-# legenda
-plt.xlabel('Anos')
-plt.xticks([b + barWidth for b in range(len(redacao_por_ano))], anos)
-plt.ylabel('Notas - Médias')
-plt.title('Médias das notas de redação')
-
-plt.legend()
-```
-
-<img src= "https://user-images.githubusercontent.com/56441375/69772008-7d543700-116d-11ea-851b-5cf5c2a00933.png" height="400" widht ="400">
+<h3> Média das notas do Enem:</h3>
+<img src= "https://user-images.githubusercontent.com/56441375/69923155-52c1f100-1481-11ea-9994-c43616c6ba61.png" height="400" widht ="400">
 
 <h2>Considerações Finais</h2> 
 A Média das Notas de Redação dos Alunos com Défict de Atenção dos anos de 2014 a 2018 são maiores do que os alunos sem. 
